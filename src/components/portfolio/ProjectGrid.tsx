@@ -14,7 +14,7 @@ export function ProjectGrid() {
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-sm font-medium text-accent">Работы</p>
-          <h2 className="mt-3 font-display text-4xl text-balance text-fg">С GitHub</h2>
+          <h2 className="mt-3 font-display text-4xl text-balance text-fg">Подборка</h2>
         </div>
         <div className="flex flex-wrap gap-2" role="tablist" aria-label="Фильтр проектов">
           {filters.map((filter) => {

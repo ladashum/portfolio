@@ -2,16 +2,23 @@
 
 export type ProjectKind = "web" | "bot" | "learn";
 
+export type ProjectShot = {
+  src: string;
+  alt: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
-  repoName: string;
+  repoName?: string;
   year: string;
   kind: ProjectKind;
   summary: string;
   stack: string[];
-  repo: string;
+  repo?: string;
   live?: string;
+  liveLabel?: string;
+  shots?: ProjectShot[];
   access: "public" | "private";
 };
 
@@ -95,38 +102,44 @@ export const projects: Project[] = [
   },
   {
     slug: "max-arkana",
-    title: "Max Arkana",
-    repoName: "max-arkana",
+    title: "Аркана",
     year: "2026",
     kind: "bot",
     summary:
-      "Бот раскладов для Max, Telegram и VK: колода, сценарии запросов, база, подписки и оплата. Тексты собирает Groq.",
-    stack: ["Python", "Groq", "оплата"],
-    repo: "https://github.com/ladashum/max-arkana",
+      "Бот раскладов в Max: карта дня, расклад на три карты и на вопрос, подписка и баланс. Подключены база данных и оплата.",
+    stack: ["Python", "API", "ЮKassa", "База данных"],
+    live: "https://max.ru/id770479002692_bot",
+    liveLabel: "Бот",
+    shots: [
+      { src: "/work/arkana-1.jpg", alt: "Стартовый экран бота Аркана в Max: меню раскладов и подписка" },
+      { src: "/work/arkana-2.jpg", alt: "Готовый расклад Арканы с общим выводом" },
+    ],
     access: "private",
   },
   {
     slug: "photo-bot",
-    title: "Photo bot",
-    repoName: "Photo_bot",
+    title: "Faceo",
     year: "2026",
     kind: "bot",
     summary:
-      "Telegram-бот для фото: загрузка снимка, выбор стиля, генерация через Replicate. Рядом подключён Groq.",
-    stack: ["Python", "python-telegram-bot", "Replicate"],
-    repo: "https://github.com/ladashum/Photo_bot",
+      "Telegram-бот фотосессий: загрузка снимка, выбор стиля, готовый кадр, баланс и покупка генераций. Подключены API и оплата.",
+    stack: ["Python", "python-telegram-bot", "API"],
+    shots: [
+      { src: "/work/faceo-1.jpg", alt: "Стартовое меню Faceo: фотосессия, покупка генераций, баланс" },
+      { src: "/work/faceo-2.jpg", alt: "Faceo принимает фото и готовит садовую фотосессию" },
+      { src: "/work/faceo-3.jpg", alt: "Готовый кадр Faceo и файл в оригинальном качестве" },
+    ],
     access: "private",
   },
   {
     slug: "flower-bot",
-    title: "Flower bot",
-    repoName: "flower-bot",
+    title: "Цветочный бот",
     year: "2026",
     kind: "bot",
-    summary:
-      "Демо цветочного магазина в Telegram: каталог, корзина, оформление. Шаг оплаты оставлен заглушкой.",
-    stack: ["HTML", "Telegram WebApp", "Python"],
-    repo: "https://github.com/ladashum/flower-bot",
-    access: "public",
+    summary: "Цветочный магазин в Telegram: каталог, корзина и оформление заказа.",
+    stack: ["Python", "Telegram WebApp", "HTML"],
+    live: "https://t.me/flowflowflowerbot",
+    liveLabel: "Бот",
+    access: "private",
   },
 ];

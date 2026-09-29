@@ -1,9 +1,17 @@
-import { ArrowUpRight, Github, Instagram } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import { profile } from "@/data/profile";
+
+function TelegramIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true" fill="currentColor">
+      <path d="M21.94 4.3 18.7 19.52c-.24 1.08-.88 1.34-1.78.84l-4.92-3.63-2.38 2.29c-.26.26-.48.48-.98.48l.35-4.98 9.06-8.19c.4-.35-.08-.54-.61-.2L6.1 13.3 1.27 11.79c-1.05-.33-1.07-1.05.22-1.55L20.6 3.3c.87-.33 1.63.2 1.34 1Z" />
+    </svg>
+  );
+}
 
 const icons = {
   github: Github,
-  instagram: Instagram,
+  telegram: TelegramIcon,
 } as const;
 
 export function Contact() {
@@ -15,7 +23,7 @@ export function Contact() {
           Открыта к задачам по интерфейсам и небольшим продуктам
         </h2>
         <p className="mt-4 max-w-xl text-pretty text-muted">
-          Код лежит на GitHub. Коротко написать удобнее в Instagram.
+          Открытый код — на GitHub. Написать можно в Telegram: @ladashum.
         </p>
 
         <ul className="mt-8 grid gap-3 sm:grid-cols-2">

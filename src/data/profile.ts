@@ -4,10 +4,10 @@ export const profile = {
   handle: "ladashum",
   role: "Frontend, веб-дизайн, цифровые продукты",
   kicker: "Портфолио · 2026",
-  lead: "Сайты на React, боты и учебные тренажёры. Ниже восемь репозиториев: у каждого стек, ссылка на код и живой адрес, если он есть.",
+  lead: "Сайты на React, боты и учебные тренажёры. У каждой работы стек, а у ботов — живая ссылка или скриншоты.",
   about: [
     "Делаю интерфейсы и небольшие продукты: лендинги, визитки студий, ботов для Telegram, Max и VK, тренажёры языков с озвучкой в браузере.",
-    "Фронтенд и веб-дизайн — диплом РЭУ им. Плеханова. В работе Figma, вёрстка, React и Python. Код собираю с AI: читаю изменения, правлю и довожу до ссылки, которую можно открыть.",
+    "Фронтенд и веб-дизайн — диплом РЭУ им. Плеханова. В работе Figma, вёрстка, React и Python. Подключаю API, ЮKassa, базы данных, оплату и сценарии внутри ботов.",
   ],
   skills: [
     "React",
@@ -18,6 +18,9 @@ export const profile = {
     "Vite",
     "Python",
     "Telegram-боты",
+    "API",
+    "ЮKassa",
+    "Базы данных",
   ],
   contacts: [
     {
@@ -25,14 +28,14 @@ export const profile = {
       label: "GitHub",
       value: "github.com/ladashum",
       href: "https://github.com/ladashum",
-      hint: "Код проектов",
+      hint: "Код открытых проектов",
     },
     {
-      id: "instagram",
-      label: "Instagram",
+      id: "telegram",
+      label: "Telegram",
       value: "@ladashum",
-      href: "https://instagram.com/ladashum",
-      hint: "Написать можно сюда",
+      href: "https://t.me/ladashum",
+      hint: "Написать в Telegram",
     },
   ],
   nav: [
