@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0c0e0c;
+  --color-fg: #eceee8;
+  --color-muted: #9aa196;
+  --color-line: #2c332c;
+  --color-accent: #7dba5a;
+  --color-accent-soft: #c6e3b0;
+  --color-accent-deep: #2f5a32;
+  --color-on-accent: #0c0e0c;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Newsreader", "Iowan Old Style", Palatino, serif;
+  --shadow-card: 0 0 0 1px rgba(236, 238, 232, 0.1);
+  --shadow-card-hover: 0 0 0 1px rgba(125, 186, 90, 0.55);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    background-image:
+      linear-gradient(to right, rgba(236, 238, 232, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(236, 238, 232, 0.035) 1px, transparent 1px);
+    background-size: 3rem 3rem;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(236, 238, 232, 0.06);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(18px);
+  }
+
+  .glass-strong {
+    background: rgba(12, 14, 12, 0.72);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
